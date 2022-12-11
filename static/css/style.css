@@ -1,0 +1,218 @@
+/* Section */
+.main-section {
+    font-family: 'Poppins';
+    padding: 80px 20px 53px 75px;
+}
+
+/* Nav bar section */
+.navbar {
+    font-family: 'Amiri';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-item {
+    padding-left: 20px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-name {
+    color: white;
+    margin: 15px;
+    font-size: 25px;
+}
+
+/* Home page section */
+.bg-section {
+    font-family: 'Poppins';
+    padding-top: 200px;
+    padding-bottom: 285px;
+    background: url('/static/images/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+.home-page   {
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+
+.home-text {
+    font-family: 'Amiri';
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.register-button {
+    margin-top: 30px;
+    width: 200px;
+    height: 55px;
+}
+
+.view-button {
+    margin-top: 30px;
+    width: 200px;
+    height: 78px;
+}
+
+#features {
+    text-align: center;
+}
+
+.features-box {
+  color: black;
+  font-size: 1.5rem;
+  padding: 5%;
+
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin: 20px;
+  color: #2E8B57;
+  font-weight: bold;
+}
+
+.features-icon {
+  color: #2E8B57;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.features-icon:hover {
+  color: #3CB371;
+}
+
+/* Register and Login section */
+input[type=text], input[type=password], input[type=datetime-local]{
+    width: 80%;
+    margin: 20px 0px;
+}
+
+.form-header {
+    font-family: 'Amiri';
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.form-inputs {
+    font-family: 'Poppins';
+    font-size: 25px;
+}
+
+.error {
+    color: #C41E3A;
+}
+
+.login-footer {
+    font-size: 20px;
+}
+
+/* Task List Division */
+.tl {
+    padding-bottom: 50px;
+}
+
+.tl-intro {
+    font-weight: 700;
+}
+
+.d-inline-block {
+    width: auto;
+    margin-top: 30px;
+    margin-right: 50px;
+    border-radius: 15px!important;;
+    border: 1.5px solid;
+}
+
+.nt-btn {
+    margin-top: 20px;
+}
+/* Task Division */
+.tl-group {
+    width: auto;
+    margin-top: 15px;
+    border-radius: 15px!important;;
+    border: 1.5px solid #2E8B57;
+}
+
+.deadline {
+    color: red;
+}
+
+.check-task {
+    text-decoration: none;
+    color: green;
+}
+
+.remove-task {
+    text-decoration: none;
+    color: red;
+}
+
+.hidden {
+    color: white;
+}
+
+.finished-task {
+    font-style: italic;
+    text-decoration: line-through #2E8B57;
+    width: auto;
+    margin-top: 15px;
+    border-radius: 15px!important;;
+    border: 1.5px solid gray;
+}
+
+.at-form {
+    background-color:  #2E8B57;
+    color: white;
+    border-radius: 15px;
+    border: 1.5px solid gray;
+    padding-top: 30px;
+    font-size: 33px;
+    max-height: 500px;
+}
+
+input[type=submit]{
+    margin: 20px 0px;
+}
+
+.help-block {
+    color: 	#C41E3A;
+}
+
+/* Footer division */
+#footer {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 60px;
+    background-color: #2E8B57;
+    color: white;
+}
+
+
+.footer-hr {
+    width: 50%;
+}
+
+.icons {
+    margin: 10px;
+    color: #f2f4f3;
+}
+
+.icons:hover {
+    color: #3CB371;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+.footer-logo {
+    width: 140px;
+    height: 140px;
+}

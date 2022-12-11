@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "header.html" %}
+  {% import "bootstrap/wtf.html" as wtf %}
+</head>
+<body>
+    <section class="main-section" id="register">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto form-inputs">
+                <h1 class="form-header">Sign up for Task Manager </h1>
+               {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "success"}) }}
+
+              </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}

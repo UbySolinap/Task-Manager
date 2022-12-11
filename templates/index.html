@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <section class="bg-section" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="home-page">
+                    <h1 class="home-text">Welcome to TaskMeister</h1>
+                    {% if not current_user.is_authenticated %}
+                    <h2 class="home-text">Register now and start being organized!</h2>
+                    <a class="btn border border-light rounded-pill btn-success btn-lg register-button" href="{{ url_for('register') }}" role="button">Sign me up!</a>
+                    {% else %}
+                    <a class="btn border border-light rounded-pill btn-success btn-lg view-button" href="{{ url_for('task_list_page') }}" role="button">View my Tasks Lists</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="feature-box col-lg-4">
+                    <i class="fa-solid fa-clipboard-check features-icon"></i>
+                    <h3 class="feature-title">Easy & simple to utilize</h3>
+                    <p>Perfect if you're looking for an uncomplicated task manager.</p>
+                </div>
+
+                <div class="feature-box col-lg-4">
+                    <i class="fa-sharp fa-solid fa-window-restore features-icon"></i>
+                    <h3 class="feature-title">Browser based for availability</h3>
+                    <p>You can use this task manager in desktop or mobile on the go.</p>
+                </div>
+
+                <div class="feature-box col-lg-4">
+                    <i class="fa-solid fa-thumbs-up features-icon"></i>
+                    <h3 class="feature-title">Free & nothing to install.</h3>
+                    <p>No pay first or subscription required. It's completely free!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}

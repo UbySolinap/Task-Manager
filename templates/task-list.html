@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "header.html" %}
+  {% import "bootstrap/wtf.html" as wtf %}
+</head>
+<body>
+  <section class="main-section" id="task-list">
+    <div class="container">
+      <div class="row">
+        <div class="tl">
+          <h1 class="tl-intro">My Task Lists:</h1>
+          {% for task in all_tasks %}
+          <div class="list-group list-group-flush d-inline-block">
+            <a href="{{ url_for('add_task', index=task.id, taskname=task.task_name) }}" class="list-group-item list-group-item-action list-group-item-success">✅ {{ task.task_name }}</a>
+            <a href="{{ url_for('delete_list', index=task.id) }}" class="list-group-item list-group-item-action list-group-item-danger">⛔ Delete Task</a>
+          </div>
+          {% endfor %}
+        </div>
+        <div>
+          <hr style="width:95%">
+          <button type="button" class="btn border-dark rounded-pill btn-success btn-lg nt-btn" data-toggle="modal" data-target="#myModal">➕ Create New Task List</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">New Task</h2>
+      </div>
+      <div class="modal-body">
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "success"}) }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+{% include "footer.html" %}

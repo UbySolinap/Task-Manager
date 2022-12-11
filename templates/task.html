@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "header.html" %}
+  {% import "bootstrap/wtf.html" as wtf %}
+</head>
+<body>
+    <section class="main-section" id="add-task">
+      <div class="container">
+        <div class="row">
+          <div class="task-list col-lg-6">
+              <h1>Task Card/s:</h1>
+              {% for task in tasks %}
+              <ul class="list-group tl-group">
+                  <li class="list-group-item single-task border-bottom-0 list-group-task"><a href="{{ url_for('task_done', task_index=task.task_list_id, delete_index=task.id) }}" class="check-task"> ✔</a> {{ task.task }}</li>
+                  <li class="list-group-item single-task list-group-task">○ Deadline: <span class="deadline">{{ task.end_date }}</span></li>
+              </ul>
+              <hr class="hidden">
+              {% endfor %}
+              <h1>Task/s Done:</h1>
+              {% for finished_task in finished %}
+              <ul class="list-group finished-task">
+                  <li class="list-group-item single-task border-bottom-0"><a href="{{ url_for('delete_task', task_index=finished_task.task_list_id, delete_index=finished_task.id) }}" class="remove-task"> X</a> {{ finished_task.task }}</li>
+                  <li class="list-group-item single-task">○ Deadline: <span class="deadline">{{ finished_task.end_date }}</span></li>
+              </ul>
+              <hr class="hidden">
+              {% endfor %}
+          </div>
+          <div class="mx-auto at-form form-inputs col-lg-4">
+            <h1 class="form-header"></h1>
+           {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "light"}) }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% include "footer.html" %}
