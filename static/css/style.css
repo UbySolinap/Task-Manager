@@ -50,7 +50,7 @@
 .register-button {
     margin-top: 30px;
     width: 200px;
-    height: 55px;
+    height: 50px;
 }
 
 .view-button {
@@ -113,6 +113,10 @@ input[type=text], input[type=password], input[type=datetime-local]{
 }
 
 /* Task List Division */
+#task-list {
+    padding-bottom: 10.1rem;
+}
+
 .tl {
     padding-bottom: 50px;
 }

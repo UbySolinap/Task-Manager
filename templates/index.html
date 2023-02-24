@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="home-page">
-                    <h1 class="home-text">Welcome to TaskMeister</h1>
+                    <h1 class="home-text">Welcome to Task Meister</h1>
                     {% if not current_user.is_authenticated %}
                     <h2 class="home-text">Register now and start being organized!</h2>
                     <a class="btn border border-light rounded-pill btn-success btn-lg register-button" href="{{ url_for('register') }}" role="button">Sign me up!</a>
